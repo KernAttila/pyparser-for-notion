@@ -28,12 +28,9 @@ def parse_account_cache(properties):
         return entry_type, {"alias": alias}
 
 # Loop over input items and add a new field called 'my_new_field' to the JSON of each one
-test = {}
+database_entries = {}
 for item in _items:
-    if "json" in item:
-        cache_type, info = parse_account_cache(item["json"]["properties"])
-    else:
-        cache_type, info = parse_account_cache(item["properties"])
-    test.setdefault(cache_type, []).append(info)
+    cache_type, info = parse_account_cache(item["json"]["properties"])
+    database_entries.setdefault(cache_type, []).append(info)
 
-return {"json":{"test":test}}
+return {"json":{"database_entries":database_entries}}
