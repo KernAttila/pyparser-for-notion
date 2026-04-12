@@ -55,7 +55,8 @@ def parse_select(item_select):
 def parse_place(item_place):
     if item_place is None:
         return None
-    address = item_place["address"]
-    latitude = item_place["lat"]
-    longitude = item_place["lon"]
-    return f"{address} (lat: {latitude}, lon: {longitude})"
+    return item_place
+    # address = item_place["address"]
+    # latitude = item_place["lat"]
+    # longitude = item_place["lon"]
+    # return f"{address} (lat: {latitude}, lon: {longitude})"
