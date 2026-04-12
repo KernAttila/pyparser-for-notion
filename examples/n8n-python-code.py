@@ -24,6 +24,8 @@ def parse_account_cache(properties):
         return entry_type, {"alias": alias, "canonical": canonical, "address": address}
     elif entry_type == "category":
         return entry_type, {"alias": alias, "canonical": canonical}
+    elif entry_type is None:
+        return "error - no type", {"alias": alias}
     else:
         return entry_type, {"alias": alias}
 
