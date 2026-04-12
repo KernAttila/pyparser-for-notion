@@ -48,6 +48,8 @@ def parse_rich_text(item_text):
     return text
 
 def parse_select(item_select):
+    if item_select is None:
+        return None
     return item_select["name"]
 
 def parse_place(item_place):
