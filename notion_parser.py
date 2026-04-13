@@ -63,11 +63,3 @@ def parse_place(item_place):
     if item_place is None:
         return None
     return item_place
-
-def check_auto_build_worked():
-    print("Auto-build worked flawlessly!")
-    return True
-
-def is_this_function_accessible():
-    print("Yes its accessible!")
-    return True
