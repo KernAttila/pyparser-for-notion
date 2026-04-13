@@ -57,7 +57,7 @@ def parse_select(item_select):
 def parse_multi_select(item_multi_select):
     if item_multi_select is None:
         return None
-    return [select["name"] for select in item_multi_select]
+    return [select["name"] for select in item_multi_select["multi_select"]]
 
 def parse_place(item_place):
     if item_place is None:
