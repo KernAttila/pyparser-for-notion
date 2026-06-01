@@ -35,5 +35,3 @@ for item in _items:
     test.setdefault(cache_type, []).append(info)
 
 pprint.pprint({"json":{"test":test}})
-
-"🥪Takeout"
