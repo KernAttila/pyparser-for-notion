@@ -66,7 +66,5 @@ def parse_place(item_place):
         return None
     return item_place
 
-def parse_checkbox(item_checkbox):
-    if item_checkbox is None:
-        return None
-    return item_checkbox["checkbox"]
+def parse_checkbox(item_checkbox) -> bool:
+    return item_checkbox
