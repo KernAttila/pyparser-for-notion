@@ -17,6 +17,8 @@ def get_parse_method(item_type):
         return parse_multi_select
     elif item_type == "place":
         return parse_place
+    elif item_type == "checkbox":
+        return parse_checkbox
     else:
         return do_nothing
     
@@ -55,11 +57,16 @@ def parse_select(item_select):
     return item_select["name"]
 
 def parse_multi_select(item_multi_select):
-    if item_multi_select["options"] is None:
+    if item_multi_select is None:
         return None
-    return [select["name"] for select in item_multi_select["options"]]
+    return [select["name"] for select in item_multi_select]
 
 def parse_place(item_place):
     if item_place is None:
         return None
     return item_place
+
+def parse_checkbox(item_checkbox):
+    if item_checkbox is None:
+        return None
+    return item_checkbox["checkbox"]
